@@ -62,7 +62,9 @@ void DotBuilder::emitNode(std::ostringstream& os, const Node* n) const {
        << " [label=\"" << label.str() << "\","
        << " style=\"filled\", shape=box, fontsize=10, margin=\"0.06,0.04\","
        << " penwidth=1.0, fillcolor=\"" << fill << "\","
-       << " tooltip=\"" << tooltip << "\"];\n";
+       << " tooltip=\"" << tooltip << "\","
+       << " URL=\"#\", target=\"_top\""   // forces <a>… -> pointer cursor
+       << "];\n";
 
     for (auto* c : n->children) {
         os << "  \"" << esc(n->code) << "\" -> \"" << esc(c->code) << "\" [arrowhead=none];\n";
