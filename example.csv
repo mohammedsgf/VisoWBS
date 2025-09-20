@@ -14,3 +14,22 @@ code,title,description,primaryResp,seconderyResp,estimateDuration
 1.4.1,Unit Tests,Write and run unit tests,QA,,3d
 1.4.2,Integration Tests,Run integration tests,QA,SE,3d
 1.5,Closeout,Close the project formally,PM,,2d
+1.5.1,Project,Overall project scope and goals,PM,,30d
+1.5.2,Initiation,Decide scope and stakeholders,PM,,2d
+1.5.3,Project Charter,Create and approve the charter,PM,,1d
+1.5.4,Stakeholder Register,List and analyze stakeholders,PM,,1d
+1.5.5,Planning,Plan requirements and architecture,SE,PM,6d
+1.5.6,Requirements,Collect and structure requirements,SE,PM,3d
+1.5.7,Architecture,Design system structure,SE,,5d
+1.5.8,Architecture,Design system structure,SE,,5d
+1.5.9,Architecture,Design system structure,SE,,5d
+1.5.9.1,Architecture,Design system structure,SE,,5d
+1.5.9.2,Architecture,Design system structure,SE,,5d
+1.5.10,Architecture,Design system structure,SE,,5d
+1.5.10.1,Architecture,Design system structure,SE,,5d
+1.5.10.2,Architecture,Design system structure,SE,,5d
+1.5.10.3,Architecture,Design system structure,SE,,5d
+1.5.10.4,Architecture,Design system structure,SE,,5d
+1.5.10.5,Architecture,Design system structure,SE,,5d
+1.5.10.6,Architecture,Design system structure,SE,,5d
+

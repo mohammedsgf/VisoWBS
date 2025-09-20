@@ -66,6 +66,19 @@ void DotBuilder::emitNode(std::ostringstream& os, const Node* n) const {
        << " URL=\"#\", target=\"_top\""   // forces <a>… -> pointer cursor
        << "];\n";
 
+    // // --- enforce sibling order on the same rank ---
+    // if (n->children.size() > 1) {
+    //     // keep all siblings on the same rank
+    //     os << "  { rank=same; ";
+    //     for (auto* c : n->children) os << "\"" << esc(c->code) << "\"; ";
+    //     os << "}\n";
+    //     // invisible chain to preserve left→right order
+    //     for (size_t i = 1; i < n->children.size(); ++i) {
+    //         os << "  \"" << esc(n->children[i-1]->code) << "\" -> \"" << esc(n->children[i]->code)
+    //            << "\" [style=invis, weight=100];\n";
+    //     }
+    // }
+
     for (auto* c : n->children) {
         os << "  \"" << esc(n->code) << "\" -> \"" << esc(c->code) << "\" [arrowhead=none];\n";
         emitNode(os, c);
@@ -74,9 +87,14 @@ void DotBuilder::emitNode(std::ostringstream& os, const Node* n) const {
 
 std::string DotBuilder::build(const Tree& t) const {
     std::ostringstream os;
+    // os << "digraph WBS {\n"
+    //       "  graph [rankdir=" << (rankdir_=="LR"?"LR":"TB") << ", nodesep=0.4, ranksep=0.7];\n"
+    //       "  node  [shape=box, style=filled, fontsize=10];\n";
     os << "digraph WBS {\n"
-          "  graph [rankdir=" << (rankdir_=="LR"?"LR":"TB") << ", nodesep=0.4, ranksep=0.7];\n"
-          "  node  [shape=box, style=filled, fontsize=10];\n";
+   << "  graph [rankdir=" << (rankdir_=="LR"?"LR":"TB")
+   << ", nodesep=0.6, ranksep=0.9, splines=ortho, ordering=out, outputorder=edgesfirst];\n"
+   << "  edge  [arrowhead=none, weight=3, tailport=s, headport=n, minlen=1];\n"
+   << "  node  [shape=box, style=rounded, fontsize=10];\n";
     for (auto* r : t.roots) emitNode(os, r);
     os << "}\n";
     return os.str();
