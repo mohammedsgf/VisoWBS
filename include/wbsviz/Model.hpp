@@ -7,11 +7,11 @@
 namespace wbsviz {
 
 struct Record {
-    std::string code, title, owner, status, start, end, estimate;
+    std::string code, title, description, primaryResp, seconderyResp, estimateDuration;
 };
 
 struct Node {
-    std::string code, title, owner, status, start, end, estimate;
+    std::string code, title, description, primaryResp, seconderyResp, estimateDuration;
     std::vector<Node*> children;
 };
 

@@ -1,18 +1,16 @@
-code,title,owner,status,start,end,estimate
-1,Project,PM,In-Progress,2025-09-01,2025-10-03,30d
-1.1,Initiation Extending this nsame as well to see of there is any crossing,PM,Done,2025-09-01,2025-09-02,2d
-1.1.1,Project Charter,PM,Done,2025-09-01,2025-09-01,1d
-1.1.2,Stakeholder Register,PM,Done,2025-09-01,2025-09-02,1d
-1.2,Planning Testing a very long name to see how does this extends to,SE,In-Progress,2025-09-03,2025-09-10,6d
-1.2.1,Requirements,SE,Done,2025-09-03,2025-09-05,3d
-1.2.2,Architecture,SE,In-Progress,2025-09-06,2025-09-10,5d
-1.3,Execution,Dev,In-Progress,2025-09-11,2025-09-25,11d
-1.3.1,Module A,Dev,In-Progress,2025-09-11,2025-09-18,6d
-1.3.2,Module B,Dev,On-Hold,2025-09-12,2025-09-22,8d
-1.3.3,Integration,Dev,Blocked,2025-09-19,2025-09-25,5d
-1.4,Testing,QA,In-Progress,2025-09-26,2025-10-01,5d
-1.4.1,Unit Tests,QA,In-Progress,2025-09-26,2025-09-28,3d
-1.4.2,Integration Tests,QA,On-Hold,2025-09-29,2025-10-01,3d
-1.4.2.1,Lalalalala,QA,On-Hold,2025-09-29,2025-10-01,3d
-1.5,Closeout,PM,Planned,2025-10-02,2025-10-03,2d
-1.5.1,Testing Closeout,PM,Planned,2025-10-02,2025-10-03,2d
+code,title,description,primaryResp,seconderyResp,estimateDuration
+1,Project,Overall project scope and goals,PM,,30d
+1.1,Initiation,Decide scope and stakeholders,PM,,2d
+1.1.1,Project Charter,Create and approve the charter,PM,,1d
+1.1.2,Stakeholder Register,List and analyze stakeholders,PM,,1d
+1.2,Planning,Plan requirements and architecture,SE,PM,6d
+1.2.1,Requirements,Collect and structure requirements,SE,PM,3d
+1.2.2,Architecture,Design system structure,SE,,5d
+1.3,Execution,Develop features and integrate,Dev,SE,11d
+1.3.1,Module A,Implement module A,Dev,,6d
+1.3.2,Module B,Implement module B,Dev,,8d
+1.3.3,Integration,Integrate A and B,Dev,SE,5d
+1.4,Testing,Test modules and system,QA,SE,5d
+1.4.1,Unit Tests,Write and run unit tests,QA,,3d
+1.4.2,Integration Tests,Run integration tests,QA,SE,3d
+1.5,Closeout,Close the project formally,PM,,2d
